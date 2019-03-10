@@ -1,0 +1,128 @@
+{
+  "id": "a36ec63e-a001-4887-828e-ffd87ec1a15a",
+  "version": "2.0",
+  "name": "lol",
+  "url": "https://foreignpolicy.com",
+  "tests": [{
+    "id": "ce6ddfbe-1a33-4a6e-98ee-bbd41c85d895",
+    "name": "foreign_pol_test",
+    "commands": [{
+      "id": "253b96d7-679b-47aa-9f10-7fdc6024acb4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60e49063-4668-4cf7-b8e3-c6c67ca2bba4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "970x1045",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e05c4236-f18b-4057-ac50-92cc08b08121",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fp-trending-content:nth-child(1) .hed",
+      "targets": [
+        ["css=.fp-trending-content:nth-child(1) .hed", "css:finder"],
+        ["xpath=//div[@id='site-wrapper']/div[3]/div[10]/div/div/ol/li/a/h3", "xpath:idRelative"],
+        ["xpath=//li/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'U.S. Cancels Journalist’s Award Over Her Criticism of Trump')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22cc3980-9533-45dd-9001-d2a6aa79465b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.the-comments > a",
+      "targets": [
+        ["css=.the-comments > a", "css:finder"],
+        ["xpath=//div[@id='main']/div/article/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2019%2F03%2F07%2Fu-s-cancels-journalists-award-over-her-criticism-of-trump-international-women-in-courage-award-state-department%2F')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1e28d57-bc10-4afd-bb57-2cb6c94f3a04",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fyre-comment-article:nth-child(1) p",
+      "targets": [
+        ["css=.fyre-comment-article:nth-child(1) p", "css:finder"],
+        ["xpath=//div[@id='usr-comm-list']/div/div/div[7]/div/article/div/section/div/p", "xpath:idRelative"],
+        ["xpath=//section/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'This story needs some detailed, follow-up reporting. If it is true that Ms. Aro was penalized for criticizing President Trump, the withdrawal of her award is a national disgrace and should be on the front page of every major newspaper. Ms. Aro has suffered threats and harassment for her reporting on Russian interference in Finnish domestic affairs; for her to be slapped by the United States is a crime. Unfortunately, the evidence cited in this story that the award actually was withdrawn for this reason is thin and circumstantial. The issue is important enough that the press should get to the bottom of it, and not be content with superficial reporting and conclusions.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c709c53b-4d99-40f3-9eb5-dba107f6c523",
+      "comment": "",
+      "command": "click",
+      "target": "css=.site-icon",
+      "targets": [
+        ["css=.site-icon", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe4b3031-fbce-432d-bfa8-0246a285810d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fp-trending-content:nth-child(4) .hed",
+      "targets": [
+        ["css=.fp-trending-content:nth-child(4) .hed", "css:finder"],
+        ["xpath=//div[@id='site-wrapper']/div[3]/div[10]/div/div/ol/li[4]/a/h3", "xpath:idRelative"],
+        ["xpath=//li[4]/a/h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc994864-f9fb-49df-9cec-8e0884661d51",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,4080)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d73654e6-d54b-4c84-b046-670ebe7e169f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.the-comments > a",
+      "targets": [
+        ["css=.the-comments > a", "css:finder"],
+        ["xpath=//div[@id='main']/div/article/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/comments_view/?view_post_comments=https%3A%2F%2Fforeignpolicy.com%2F2019%2F03%2F08%2Feurope-doesnt-even-agree-on-assad-anymore%2F')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "980041d5-7070-42f6-b35a-ecb547168bd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fyre-comment > p",
+      "targets": [
+        ["css=.fyre-comment > p", "css:finder"],
+        ["xpath=//div[@id='usr-comm-list']/div/div/div[7]/div/article/div/section/div/p", "xpath:idRelative"],
+        ["xpath=//section/div/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a20d6419-d8c6-429c-a653-06994c7b6379",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "58d5b5c5-7ae8-404a-914f-e6c59b7b4949",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ce6ddfbe-1a33-4a6e-98ee-bbd41c85d895"]
+  }],
+  "urls": ["https://foreignpolicy.com/"],
+  "plugins": []
+}
