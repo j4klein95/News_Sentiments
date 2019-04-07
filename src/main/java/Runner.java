@@ -1,23 +1,19 @@
-import com.jsoup.scraper.foreignPolicy;
+import com.fopo.scraper.FoPoURLGrab;
+import org.openqa.selenium.WebDriver;
+import com.selenium.ff.drive.driverConfig;
 
-import java.util.ArrayList;
+import java.io.IOException;
+
 
 public class Runner {
 
-    public static void main(String[] args) {
-        foreignPolicy fpScraper = new foreignPolicy();
-        ArrayList<String> fpTrendingUrls = fpScraper.getTrendingURLs();
+    public static void main(String[] args) throws IOException {
+       //Setup Scrapers and Drivers
+        driverConfig config = new driverConfig();
+        WebDriver driver = config.initFirefoxDriver();
+        FoPoURLGrab fpScraper = new FoPoURLGrab();
 
-
-
-
-        //        System.out.println("Starting Web Driver");
-//
-//        driverConfig configuration = new driverConfig();
-//        fpRunner fpRunner = new fpRunner();
-//
-//        WebDriver driver = configuration.initFirefoxDriver();
-//        fpRunner.fpDriver(driver);
-
+        //Grab FoPo trending Articles
+        fpScraper.FoPoDriver(driver);
     }
 }
