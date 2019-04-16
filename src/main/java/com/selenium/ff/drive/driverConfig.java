@@ -16,8 +16,13 @@ public class driverConfig{
         FirefoxOptions options = new FirefoxOptions();
         FirefoxProfile driverProfile = allProfiles.getProfile("web_driver");
         options.setProfile(driverProfile);
-        options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
-        System.setProperty("webdriver.gecko.driver", "D:\\Program_Files_Programming\\Gecko_Driver\\geckodriver.exe");
+
+//        options.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+//        System.setProperty("webdriver.gecko.driver", "D:\\Program_Files_Programming\\Gecko_Driver\\geckodriver.exe");
+
+        //For Mac
+//        options.setBinary("")
+        System.setProperty("webdriver.gecko.driver", "geckodrivers/geckodriver");
 
         System.out.println("Putting together the driver");
 
