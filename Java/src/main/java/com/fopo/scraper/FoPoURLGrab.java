@@ -11,18 +11,34 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 public class FoPoURLGrab {
-
+    /**Goes out to the comment URL's using web driver, scrapes each comment, appends to file (soon)
+     * @param driver driver
+     * @throws IOException
+     */
+    //TODO Go through each comment, append relevant information to already created CSV.
     public void FoPoDriver(WebDriver driver) throws IOException {
+        //Get list of FoPo comment URL's
         ArrayList<String> commentURLs = getFoPoCommentURLs();
+
+        //Travel to each comment section url, attach comments and relevant info to .txt
         for (String url : commentURLs) {
             driver.get(url);
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             }
     }
 
+    /**Grabs the url's of the FoPo comment section.
+     * @return ArrayList<String> commentUrls
+     * @throws IOException e
+     */
     private ArrayList<String> getFoPoCommentURLs() throws IOException {
+        //Create list of trending FoPo URL's
         ArrayList<String> trendingURLs = getFoPoTrendingURLs();
+
+        //Create list object to add comment section links to.
         ArrayList<String> commentUrls = new ArrayList<String>();
+
+        //For each article's URL, gather the URL for comment section, add to list
         for (String url : trendingURLs){
             Document doc = Jsoup.connect(url).get();
             Elements commentButtonDiv = doc.getElementsByClass("the-comments");
@@ -31,12 +47,15 @@ public class FoPoURLGrab {
                 commentUrls.add(link.attr("abs:href"));
             }
         }
+
+        // return comment URL list
         return commentUrls;
     }
 
 
-
-
+    /**Goes out and grabs Urls for FoPo top 10 trending articles
+     * @return ArrayList<String> urlList
+     */
     private ArrayList<String> getFoPoTrendingURLs() {
         String URL = "https://foreignpolicy.com/";
         ArrayList<String> urlList = new ArrayList<String>();
